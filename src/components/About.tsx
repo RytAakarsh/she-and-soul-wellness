@@ -1,5 +1,5 @@
-import angelImage from '@/assets/angel-kapoor.jpg';
-import ujjwalImage from '@/assets/ujjwal-singh.jpg';
+import angelImage from '@/Pictures/Angel.jpg';
+import ujjwalImage from '@/Pictures/Ujjwal.png';
 
 const About = () => {
   const teamMembers = [
