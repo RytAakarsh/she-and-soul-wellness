@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Mail } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const Newsletter = () => {
   const [email, setEmail] = useState('');
@@ -21,16 +22,35 @@ const Newsletter = () => {
 
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const { data, error } = await supabase.functions.invoke('submit-form', {
+        body: {
+          type: 'newsletter',
+          name: name,
+          email: email,
+        },
+      });
+
+      if (error) {
+        throw error;
+      }
+
       toast({
         title: "Welcome to She&Soul! 🎉",
         description: "You've been added to our waitlist. We'll notify you when we launch!",
       });
       setEmail('');
       setName('');
+    } catch (error: any) {
+      console.error('Error submitting newsletter signup:', error);
+      toast({
+        title: "Error",
+        description: "Failed to join the waitlist. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
