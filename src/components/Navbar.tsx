@@ -24,7 +24,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {['HOME', 'About', 'Problem', 'Solution'].map((item) => (
+              {['Home', 'About', 'Problem', 'Solution'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}

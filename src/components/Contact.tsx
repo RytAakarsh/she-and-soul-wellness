@@ -160,10 +160,10 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground">Email Us</h4>
                     <a 
-                      href="mailto:angel.founder@sheandsoul.co.in"
+                      href="mailto:shesoul19@gmail.com"
                       className="text-muted-foreground hover:text-primary transition-colors duration-300"
                     >
-                      angel.founder@sheandsoul.co.in
+                      shesoul19@gmail.com
                     </a>
                   </div>
                 </div>

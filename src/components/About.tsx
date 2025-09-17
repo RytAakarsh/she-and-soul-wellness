@@ -53,7 +53,7 @@ const About = () => {
                 <div className="flex flex-col sm:flex-row items-center gap-6">
                   {/* Member Image */}
                   <div className="flex-shrink-0">
-                    <div className="w-32 h-32 rounded-2xl overflow-hidden shadow-soft bg-gradient-to-br from-primary/10 to-secondary/10 p-2">
+                    <div className="w-32 h-44 rounded-2xl overflow-hidden shadow-soft bg-gradient-to-br from-primary/10 to-secondary/10 p-2">
                       <img
                         src={member.image}
                         alt={member.name}
