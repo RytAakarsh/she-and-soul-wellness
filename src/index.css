@@ -38,9 +38,9 @@
     --radius: 1rem;
 
     /* Custom gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-primary: linear-gradient(180deg, hsl(var(--primary)), hsl(var(--secondary)));
     --gradient-soft: linear-gradient(180deg, hsl(var(--background)), hsl(0 0% 98%));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--secondary) / 0.1));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--primary) / 0.1), hsl(var(--secondary) / 0.1));
 
     /* Shadows */
     --shadow-soft: 0 4px 24px -4px hsl(var(--primary) / 0.1);
@@ -93,7 +93,7 @@
 @layer components {
   /* Hero text effects */
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+    @apply bg-gradient-to-b from-primary to-secondary bg-clip-text text-transparent;
   }
 
   /* Card hover effects */
@@ -103,7 +103,7 @@
 
   /* Button animations */
   .btn-primary {
-    @apply bg-gradient-to-r from-primary to-secondary text-white font-medium px-8 py-3 rounded-full shadow-soft transition-all duration-300 hover:shadow-card hover:scale-105;
+    @apply bg-gradient-to-b from-primary to-secondary text-white font-medium px-8 py-3 rounded-full shadow-soft transition-all duration-300 hover:shadow-card hover:scale-105;
   }
 
   .btn-secondary {
@@ -132,12 +132,12 @@
   }
 
   .flip-card-front {
-    @apply bg-gradient-to-br from-primary/10 to-secondary/10;
+    @apply bg-gradient-to-b from-primary/10 to-secondary/10;
   }
 
   .flip-card-back {
     transform: rotateY(180deg);
-    @apply bg-gradient-to-br from-secondary/10 to-primary/10;
+    @apply bg-gradient-to-b from-secondary/10 to-primary/10;
   }
 
   /* Animations */
